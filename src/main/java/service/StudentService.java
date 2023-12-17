@@ -3,6 +3,8 @@ package service;
 import model.Student;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 @Service
@@ -31,4 +33,15 @@ public class StudentService {
     public Student deleteStudent(long id) {
         return students.remove(id);
     }
+
+    public Collection<Student> findByAge(int age) {
+        ArrayList<Student> result = new ArrayList<>();
+        for (Student student : students.values()) {
+            if (student.getAge() == age) {
+                result.add(student);
+            }
+        }
+        return result;
+    }
+
 }
