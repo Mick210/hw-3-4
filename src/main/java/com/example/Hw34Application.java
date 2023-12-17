@@ -1,4 +1,4 @@
-package com.example.hw34;
+package com.example;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;

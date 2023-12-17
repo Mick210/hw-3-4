@@ -1,10 +1,10 @@
-package com.controller;
+package com.example.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import model.Faculty;
-import service.FacultyService;
+import com.example.model.Faculty;
+import com.example.service.FacultyService;
 
 import java.util.Collection;
 import java.util.Collections;

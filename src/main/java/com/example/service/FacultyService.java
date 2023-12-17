@@ -1,7 +1,7 @@
-package service;
+package com.example.service;
 
 
-import model.Faculty;
+import com.example.model.Faculty;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
