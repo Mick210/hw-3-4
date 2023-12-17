@@ -1,11 +1,8 @@
 package com.example.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-import java.util.Objects;	import java.util.Objects;
+import java.util.Objects;
 
 
 @Entity
@@ -15,6 +12,11 @@ public class Student {
     private long id;
     private String name;
     private int age;
+
+    @ManyToOne
+    //@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "faculty_id")
+    private Faculty faculty;
 
     public Student() {
     }
@@ -59,5 +61,14 @@ public class Student {
 
     public int getAge() {
         return age;
+    }
+
+
+    public Faculty getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(Faculty faculty) {
+        this.faculty = faculty;
     }
 }
