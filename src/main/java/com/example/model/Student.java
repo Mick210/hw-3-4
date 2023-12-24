@@ -71,4 +71,8 @@ public class Student {
     public void setFaculty(Faculty faculty) {
         this.faculty = faculty;
     }
+
+    public String getName() {
+        return name;
+    }
 }

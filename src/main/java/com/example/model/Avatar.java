@@ -69,5 +69,3 @@ public class Avatar {
         this.student = student;
     }
 }
-
-}
