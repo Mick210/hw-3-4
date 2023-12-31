@@ -67,4 +67,12 @@ public class StudentService {
     public Collection<Student> getStudentsOfFaculty(Long id) {
         return studentRepository.findStudentsByFaculty_Id(id);
     }
+
+    public Student createStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
+    public Student updateStudent(Student student) {
+        return studentRepository.save(student);
+    }
 }
