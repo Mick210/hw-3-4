@@ -1,10 +1,19 @@
 package com.example.model;
 
+import jakarta.persistence.*;
+
+import java.util.Collection;
 import java.util.Objects;
 
+
+@Entity
 public class Faculty {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name, color;
+    @OneToMany(mappedBy = "faculty", fetch = FetchType.LAZY)
+    private Collection<Student> students;
 
     public Faculty() {
     }
@@ -49,5 +58,18 @@ public class Faculty {
 
     public String getColor() {
         return color;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
     }
 }
